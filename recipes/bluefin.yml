@@ -1,0 +1,39 @@
+name: bluefin
+description: OS image based on Bluefin with some SecureBlue inspirations.
+
+base-image: ghcr.io/ublue-os/bluefin-dx
+image-version: latest
+
+modules:
+  - type: files
+    files:
+      - usr: /usr # copies config/files/usr into your image's /usr.
+                  # put configuration files you want in /etc/ on a booted system 
+                  # in /usr/etc/ in the image. read more in files module reference.
+
+  - type: rpm-ostree
+    install:
+      - firefox
+
+  - type: default-flatpaks
+    notify: true # Send notification after install/uninstall is finished (true/false)
+    system:
+      remove:
+        - org.mozilla.firefox
+
+  # https://blue-build.org/reference/modules/gnome-extensions/
+  - type: gnome-extensions
+    install:
+      - clipboard-historyalexsaveau.dev.v42
+
+  # https://blue-build.org/reference/modules/gschema-overrides/
+  - type: gschema-overrides
+    include:
+      - zz1-workspace.gschema.override
+      - zz1-mutter.gschema.override
+
+  # https://blue-build.org/reference/modules/signing/
+  - type: signing
+
+  # https://blue-build.org/reference/modules/yafti/
+  - type: yafti
