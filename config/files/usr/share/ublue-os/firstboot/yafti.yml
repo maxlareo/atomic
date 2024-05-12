@@ -58,12 +58,32 @@ screens:
             - Text Editor: org.gnome.TextEditor
             - Videos (Player): org.gnome.Totem
             - Weather: org.gnome.Weather
-
         System Apps:
           description: System applications for all desktop environments.
           default: true
           packages:
             - Flatseal (Permission Manager): com.github.tchx84.Flatseal
+            - WareHouse (Flatpack Manager):io.github.flattool.Warehouse
+            - Media Writer: org.fedoraproject.MediaWriter
+            - Mission Center (System Resource Monitor): io.missioncenter.MissionCenter
+            - Gear Lever (AppImage Manager): it.mijorus.gearlever
+        Development:
+          description: Development applications
+          default: true
+          packages:
+            - Box Buddy (Distrobox GUI): io.github.dvlv.boxbuddyrs
+        Gamng Apps:
+          description: Gaming applications.
+          default: false
+          packages:
+            - Steam: com.valvesoftware.Steam
+            - Lutris: net.lutris.Lutris
+            - Heroic Games Launcher: com.heroicgameslauncher.hgl
+            - Bottles: com.usebottles.bottles
+            - ProtonPlus (Wine/Proton Manager): com.vysp3r.ProtonPlus
+            - VulkanLayer MangoHud: org.freedesktop.Platform.VulkanLayer.MangoHud
+            - VulkanLayer vkBasalt: org.freedesktop.Platform.VulkanLayer.vkBasalt
+            - VulkanLayer OBSVkCapture: org.freedesktop.Platform.VulkanLayer.OBSVkCapture
 
   final-screen:
     source: yafti.screen.title
