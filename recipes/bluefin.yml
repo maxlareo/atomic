@@ -14,13 +14,33 @@ modules:
   - type: rpm-ostree
     install:
       - firefox
+      - gnome-shell-extension-pop-shell
+      - screen
+      - wishlist
+    remove:
+      - solaar
+      - cockpit-machines
+      - cockpit-networkmanager
+      - cockpit-ostree
+      - cockpit-pcp
+      - cockpit-podman
+      - cockpit-selinux
+      - cockpit-storaged
+      - cockpit-system
+      - dbus-x11
+      - kcli
+      - lxd-agent
+      - lxd
+      - rocm-hip
+      - rocm-opencl
+      - gnome-shell-extension-dash-to-dock
+      - input-leap
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
       remove:
         - org.mozilla.firefox
-
 
   # https://blue-build.org/reference/modules/script/
   - type: script

@@ -56,8 +56,9 @@ screens:
             - Photos (Organizer): org.gnome.Photos
             - Sushi (Nautilus Previewer): org.gnome.NautilusPreviewer
             - Text Editor: org.gnome.TextEditor
-            - Videos (Player): org.gnome.Totem
+            - Videos (Player): io.github.celluloid_player.Celluloid
             - Weather: org.gnome.Weather
+            - Nextcloud: com.nextcloud.desktopclient.nextcloud
         System Apps:
           description: System applications for all desktop environments.
           default: true
@@ -67,6 +68,7 @@ screens:
             - Media Writer: org.fedoraproject.MediaWriter
             - Mission Center (System Resource Monitor): io.missioncenter.MissionCenter
             - Gear Lever (AppImage Manager): it.mijorus.gearlever
+            - Vorta (BorgBackup GUI): com.borgbase.Vorta
         Development:
           description: Development applications
           default: true
@@ -84,6 +86,11 @@ screens:
             - VulkanLayer MangoHud: org.freedesktop.Platform.VulkanLayer.MangoHud
             - VulkanLayer vkBasalt: org.freedesktop.Platform.VulkanLayer.vkBasalt
             - VulkanLayer OBSVkCapture: org.freedesktop.Platform.VulkanLayer.OBSVkCapture
+        Communication:
+          description: Communication applications.
+          default: false
+          packages:
+            - Discord: com.discordapp.Discord
 
   final-screen:
     source: yafti.screen.title
