@@ -62,6 +62,12 @@ modules:
       - zz1-workspace.gschema.override
       - zz1-mutter.gschema.override
 
+  # https://blue-build.org/reference/modules/fonts/
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode
+
   # https://blue-build.org/reference/modules/signing/
   - type: signing
 
