@@ -16,7 +16,6 @@ modules:
       - firefox
       - gnome-shell-extension-pop-shell
       - screen
-      - wishlist
     remove:
       - solaar
       - cockpit-machines
@@ -43,9 +42,14 @@ modules:
         - org.mozilla.firefox
 
   # https://blue-build.org/reference/modules/script/
-  - type: script
-    scripts:
-      - 1password.sh
+  #- type: script
+  #  scripts:
+  #    - 1password.sh
+
+  # https://blue-build.org/reference/modules/bling/
+  - type: bling
+    install:
+      - 1password
 
   # https://blue-build.org/reference/modules/gnome-extensions/
   - type: gnome-extensions
