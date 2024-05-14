@@ -42,9 +42,9 @@ modules:
         - org.mozilla.firefox
 
   # https://blue-build.org/reference/modules/script/
-  #- type: script
-  #  scripts:
-  #    - 1password.sh
+  - type: script
+    scripts:
+      - homebrewanalyticsoptout.sh
 
   # https://blue-build.org/reference/modules/bling/
   - type: bling
