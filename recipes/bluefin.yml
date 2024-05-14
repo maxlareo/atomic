@@ -26,7 +26,6 @@ modules:
       - cockpit-selinux
       - cockpit-storaged
       - cockpit-system
-      - dbus-x11
       - kcli
       - lxd-agent
       - lxd
