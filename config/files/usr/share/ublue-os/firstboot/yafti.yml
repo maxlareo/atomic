@@ -10,21 +10,18 @@ screens:
       description: |
         This guided installer will help you get started with your new system.
 
-  can-we-modify-your-flatpaks:
+  can-we-remove-your-system-flatpaks-and-user-fedora-remote:
     source: yafti.screen.consent
     values:
-      title: Flathub setup
-      condition:
-        run: flatpak remotes --columns=name | grep fedora
+      title: Remove system Flatpaks and remove Fedora remotes
       description: |
-        This step will remove all Fedora and Flathub Flatpaks from your system and replace them with Flathub's Verified repository. It will not reinstall your flatpaks. It will also disable the system flatpaks in favor of user flatpaks.
+        This step will remove all Fedora and Flathub system Flatpaks. It will not reinstall your flatpaks. It will also disable the system flatpaks in favor of user flatpaks. It will also remove Fedora user remote.
       actions:
         - run: flatpak remote-delete --system --force fedora
-        - run: flatpak remote-delete --user --force fedora
         - run: flatpak remote-delete --system --force flathub
-        - run: flatpak remote-delete --user --force flathub
         - run: flatpak remove --system --noninteractive --all
-        - run: flatpak remote-add --if-not-exists --user --subset=verified flathub-verified https://flathub.org/repo/flathub.flatpakrepo
+        - run: flatpak remote-delete --user --force fedora
+        - run: flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
   
   applications:
     source: yafti.screen.package
@@ -65,8 +62,9 @@ screens:
           default: true
           packages:
             - Flatseal (Permission Manager): com.github.tchx84.Flatseal
-            - WareHouse (Flatpack Manager):io.github.flattool.Warehouse
+            - WareHouse (Flatpack Manager): io.github.flattool.Warehouse
             - Media Writer: org.fedoraproject.MediaWriter
+            - Impression: io.gitlab.adhami3310.Impression
             - Mission Center (System Resource Monitor): io.missioncenter.MissionCenter
             - Gear Lever (AppImage Manager): it.mijorus.gearlever
             - Vorta (BorgBackup GUI): com.borgbase.Vorta
@@ -86,11 +84,10 @@ screens:
             - Heroic Games Launcher: com.heroicgameslauncher.hgl
             - Bottles: com.usebottles.bottles
             - ProtonPlus (Wine/Proton Manager): com.vysp3r.ProtonPlus
-            - Gamescope (Utility): org.freedesktop.Platform.VulkanLayer.gamescope
-            - MangoHUD (Utility): org.freedesktop.Platform.VulkanLayer.MangoHud
-            - vkBasalt (Utility): org.freedesktop.Platform.VulkanLayer.vkBasalt
-            - OBSVkCapture (Utility): org.freedesktop.Platform.VulkanLayer.OBSVkCapture
             - SteamTinkerLaunch (Utility): com.valvesoftware.Steam.Utility.steamtinkerlaunch
+            - Gamescope (Utility): org.freedesktop.Platform.VulkanLayer.gamescope//23.08
+            - MangoHUD (Utility): org.freedesktop.Platform.VulkanLayer.MangoHud//23.08
+            - vkBasalt (Utility): org.freedesktop.Platform.VulkanLayer.vkBasalt//23.08
         Office:
           description: Boost your productivity.
           default: false
