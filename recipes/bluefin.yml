@@ -16,6 +16,8 @@ modules:
       - firefox
       - gnome-shell-extension-pop-shell
       - screen
+      - waydroid
+      - lzip
     remove:
       - solaar
       - cockpit-machines
@@ -43,7 +45,8 @@ modules:
   # https://blue-build.org/reference/modules/script/
   - type: script
     scripts:
-      - homebrewanalyticsoptout.sh
+      - homebrew-analytics-optout.sh
+      - install-waydroid.sh
 
   # https://blue-build.org/reference/modules/bling/
   - type: bling
