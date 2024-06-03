@@ -1,3 +1,4 @@
+---
 name: bluefin
 description: OS image based on Bluefin with some SecureBlue inspirations.
 
@@ -72,8 +73,7 @@ modules:
   - type: fonts
     fonts:
       nerd-fonts:
-        - FiraCode
-        - Meslo
+        - JetBrainsMono
 
   # https://blue-build.org/reference/modules/signing/
   - type: signing
