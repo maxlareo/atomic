@@ -1,3 +1,4 @@
+---
 title: Welcome to bluefin!
 properties:
   mode: "run-on-change"
@@ -22,7 +23,7 @@ screens:
         - run: flatpak remove --system --noninteractive --all
         - run: flatpak remote-delete --user --force fedora
         - run: flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
-  
+
   applications:
     source: yafti.screen.package
     values:
