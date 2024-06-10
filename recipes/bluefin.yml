@@ -8,9 +8,7 @@ image-version: latest
 modules:
   - type: files
     files:
-      - usr: /usr # copies config/files/usr into your image's /usr.
-                  # put configuration files you want in /etc/ on a booted system 
-                  # in /usr/etc/ in the image. read more in files module reference.
+      - usr: /usr
 
   - type: rpm-ostree
     install:
@@ -47,10 +45,13 @@ modules:
       remove:
         - org.mozilla.firefox
 
+  # https://blue-build.org/reference/modules/brew/
+  - type: brew
+    brew-analytics: false
+
   # https://blue-build.org/reference/modules/script/
   - type: script
     scripts:
-      - homebrew-analytics-optout.sh
       - install-waydroid.sh
 
   # https://blue-build.org/reference/modules/bling/
