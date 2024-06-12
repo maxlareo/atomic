@@ -1,6 +1,6 @@
 ---
 name: bluefin
-description: OS image based on Bluefin with some SecureBlue inspirations.
+description: Personal OS image based on Bluefin.
 
 base-image: ghcr.io/ublue-os/bluefin-dx
 image-version: latest
@@ -22,6 +22,12 @@ modules:
       - aspell
       - aspell-en
     remove:
+      # ublue-os/main
+      - google-noto-sans-balinese-fonts
+      - google-noto-sans-cjk-fonts
+      - google-noto-sans-javanese-fonts
+      - google-noto-sans-sundanese-fonts
+      # ublue-os/bluefin
       - solaar
       - cockpit-machines
       - cockpit-networkmanager
@@ -38,9 +44,18 @@ modules:
       - rocm-opencl
       - gnome-shell-extension-dash-to-dock
       - input-leap
+      - code
+      - adobe-source-code-pro-fonts
+      - cascadia-code-fonts
+      - google-droid-sans-mono-fonts
+      - google-go-mono-fonts
+      - ibm-plex-mono-fonts
+      - mozilla-fira-mono-fonts
+      - powerline-fonts
+      - ubuntu-family-fonts
 
   - type: default-flatpaks
-    notify: true # Send notification after install/uninstall is finished (true/false)
+    notify: true
     system:
       remove:
         - org.mozilla.firefox
