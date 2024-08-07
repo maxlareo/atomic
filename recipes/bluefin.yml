@@ -6,9 +6,11 @@ base-image: ghcr.io/ublue-os/bluefin-dx
 image-version: latest
 
 modules:
+  # https://blue-build.org/reference/modules/files/
   - type: files
     files:
-      - usr: /usr
+      - source: system
+        destination: /
 
   - type: rpm-ostree
     install:
