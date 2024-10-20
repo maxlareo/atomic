@@ -79,7 +79,7 @@ modules:
   # https://blue-build.org/reference/modules/gnome-extensions/
   - type: gnome-extensions
     install:
-      - clipboard-historyalexsaveau.dev.v42
+      - clipboard-historyalexsaveau.dev.v45
 
   # https://blue-build.org/reference/modules/gschema-overrides/
   - type: gschema-overrides
