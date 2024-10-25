@@ -31,10 +31,10 @@ modules:
       - google-noto-sans-sundanese-fonts
       # ublue-os/bluefin
       - solaar
+      - cockpit-bridge
       - cockpit-machines
       - cockpit-networkmanager
       - cockpit-ostree
-      - cockpit-pcp
       - cockpit-podman
       - cockpit-selinux
       - cockpit-storaged
