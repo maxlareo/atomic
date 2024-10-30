@@ -40,8 +40,6 @@ modules:
       - cockpit-storaged
       - cockpit-system
       - kcli
-      - lxd-agent
-      - lxd
       - rocm-hip
       - rocm-opencl
       - gnome-shell-extension-dash-to-dock
