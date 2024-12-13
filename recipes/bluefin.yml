@@ -24,11 +24,6 @@ modules:
       - aspell
       - aspell-en
     remove:
-      # ublue-os/main
-      - google-noto-sans-balinese-fonts
-      - google-noto-sans-cjk-fonts
-      - google-noto-sans-javanese-fonts
-      - google-noto-sans-sundanese-fonts
       # ublue-os/bluefin
       - solaar
       - cockpit-bridge
@@ -45,14 +40,6 @@ modules:
       - gnome-shell-extension-dash-to-dock
       - input-leap
       - code
-      - adobe-source-code-pro-fonts
-      - cascadia-code-fonts
-      - google-droid-sans-mono-fonts
-      - google-go-mono-fonts
-      - ibm-plex-mono-fonts
-      - mozilla-fira-mono-fonts
-      - powerline-fonts
-      - ubuntu-family-fonts
 
   - type: default-flatpaks
     notify: true
