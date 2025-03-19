@@ -82,4 +82,5 @@ modules:
   - type: signing
 
   # https://blue-build.org/reference/modules/yafti/
-  - type: yafti
+  # Currently break build, TO FIX
+  # - type: yafti
