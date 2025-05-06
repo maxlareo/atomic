@@ -25,7 +25,6 @@ modules:
       - aspell-en
     remove:
       # ublue-os/bluefin
-      - solaar
       - cockpit-bridge
       - cockpit-machines
       - cockpit-networkmanager
