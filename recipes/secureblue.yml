@@ -1,0 +1,72 @@
+---
+name: secureblue
+description: Personal OS image based on Secureblue.
+
+base-image: ghcr.io/secureblue/cosmic-main-hardened
+image-version: latest
+
+modules:
+  # https://blue-build.org/reference/modules/files/
+  - type: files
+    files:
+      - source: system
+        destination: /
+
+  - type: rpm-ostree
+    install:
+      - firefox
+      - foot
+      - foot-terminfo
+      # - gnome-shell-extension-pop-shell
+      - screen
+      - waydroid
+      - lzip
+      - aspell
+      - aspell-en
+    # remove:
+    # ublue-os/bluefin
+    # - code
+
+  # - type: default-flatpaks
+  #   notify: true
+  #   system:
+  #     remove:
+  #       - org.mozilla.firefox
+
+  # https://blue-build.org/reference/modules/brew/
+  - type: brew
+    brew-analytics: false
+
+  # https://blue-build.org/reference/modules/script/
+  - type: script
+    scripts:
+      - install-waydroid.sh
+
+  # https://blue-build.org/reference/modules/bling/
+  - type: bling
+    install:
+      - 1password
+
+  # # https://blue-build.org/reference/modules/gnome-extensions/
+  # - type: gnome-extensions
+  #   install:
+  #     - clipboard-historyalexsaveau.dev.v46
+
+  # # https://blue-build.org/reference/modules/gschema-overrides/
+  # - type: gschema-overrides
+  #   include:
+  #     - zz1-workspace.gschema.override
+  #     - zz1-mutter.gschema.override
+
+  # https://blue-build.org/reference/modules/fonts/
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - JetBrainsMono
+
+  # https://blue-build.org/reference/modules/signing/
+  - type: signing
+
+  # https://blue-build.org/reference/modules/yafti/
+  # Currently break build, TO FIX
+  # - type: yafti
