@@ -41,7 +41,8 @@ modules:
 
   - type: default-flatpaks
     notify: true
-    system:
+    configurations:
+    - scope: system
       remove:
         - org.mozilla.firefox
 

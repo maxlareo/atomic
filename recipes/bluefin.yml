@@ -40,10 +40,11 @@ modules:
       - code
 
   - type: default-flatpaks
-    notify: true
-    system:
-      remove:
-        - org.mozilla.firefox
+    configurations:
+      - notify: true
+        scope: system
+        remove:
+          - org.mozilla.firefox
 
   # https://blue-build.org/reference/modules/brew/
   - type: brew
