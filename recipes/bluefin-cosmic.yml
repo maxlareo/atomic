@@ -36,7 +36,6 @@ modules:
       - kcli
       - rocm-hip
       - rocm-opencl
-      - gnome-shell-extension-dash-to-dock
       - code
 
   - type: default-flatpaks
@@ -60,11 +59,6 @@ modules:
   - type: bling
     install:
       - 1password
-
-  # https://blue-build.org/reference/modules/gnome-extensions/
-  - type: gnome-extensions
-    install:
-      - clipboard-historyalexsaveau.dev.v46
 
   # https://blue-build.org/reference/modules/gschema-overrides/
   - type: gschema-overrides

@@ -36,7 +36,6 @@ modules:
       - kcli
       - rocm-hip
       - rocm-opencl
-      - gnome-shell-extension-dash-to-dock
       - code
 
   - type: default-flatpaks
