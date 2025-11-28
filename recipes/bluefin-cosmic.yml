@@ -33,7 +33,6 @@ modules:
       - cockpit-selinux
       - cockpit-storaged
       - cockpit-system
-      - kcli
       - rocm-hip
       - rocm-opencl
       - code
