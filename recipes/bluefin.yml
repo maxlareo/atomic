@@ -35,7 +35,6 @@ modules:
       - cockpit-system
       - rocm-hip
       - rocm-opencl
-      - code
 
   - type: default-flatpaks
     configurations:
